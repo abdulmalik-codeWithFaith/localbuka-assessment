@@ -3,13 +3,10 @@ import { BowlIcon } from './icons'
 
 interface RestaurantImageProps {
   src: string | undefined
-  /** The restaurant's name, used for the image description. */
   name: string
 }
 
-/** Shows the photo, or a neutral placeholder when there is none or it fails to load. */
 export function RestaurantImage({ src, name }: RestaurantImageProps) {
-  // Remember which address failed (not just "failed"), so a new photo gets a fresh attempt.
   const [failedSrc, setFailedSrc] = useState<string | null>(null)
 
   if (!src || failedSrc === src) {
