@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { HealthController } from './health.controller.js';
+import { PointsModule } from './points/points.module.js';
+import { RestaurantsModule } from './restaurants/restaurants.module.js';
+import { ReviewsModule } from './reviews/reviews.module.js';
 
 @Module({
   imports: [
@@ -20,6 +23,9 @@ import { HealthController } from './health.controller.js';
         synchronize: false,
       }),
     }),
+    RestaurantsModule,
+    ReviewsModule,
+    PointsModule,
   ],
   controllers: [HealthController],
 })

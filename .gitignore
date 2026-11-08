@@ -1,0 +1,25 @@
+cat > .gitignore << 'EOF'
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.expo/
+.next/
+
+# Environment variables (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Logs and test output
+*.log
+npm-debug.log*
+coverage/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+EOF

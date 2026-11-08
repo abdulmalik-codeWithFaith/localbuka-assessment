@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Figtree Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* Palm green: primary brand colour. */
+  --color-palm-50: #eaf3ee;
+  --color-palm-100: #d3e6db;
+  --color-palm-600: #26734e;
+  --color-palm-700: #1e5b3f;
+  --color-palm-800: #164530;
+
+  /* Danfo yellow: ratings and highlights. Always a fill, with dark text on top. */
+  --color-danfo-400: #f5b800;
+  --color-danfo-500: #dba400;
+
+  /* Pepper red: favourites and errors. */
+  --color-pepper-50: #fcece9;
+  --color-pepper-500: #c9341f;
+  --color-pepper-600: #a92a18;
+
+  --color-chalk: #f2f5f1;
+  --color-ink: #1b2a22;
+  --color-muted: #5a6b61;
+  --color-line: #d8e1da;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-chalk);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-palm-700);
+    outline-offset: 2px;
+  }
+}
