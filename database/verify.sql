@@ -1,4 +1,3 @@
-cat > database/verify.sql << 'EOF'
 -- verify.sql: proves the database rules work. Everything runs inside a transaction
 -- that is rolled back at the end, so it leaves no data behind.
 -- Expected: 3 lines marked "ERROR" (the blocked duplicates) and everything else succeeds.
@@ -35,4 +34,3 @@ INSERT INTO points_ledger (id, user_id, action, points) VALUES ('t6', 'u_test', 
 SELECT id, action, points FROM points_ledger ORDER BY id;
 
 ROLLBACK;
-EOF
