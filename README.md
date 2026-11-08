@@ -62,7 +62,7 @@ npx expo start              # scan the QR code with Expo Go
 
 The app finds your computer's address by itself while developing. If it cannot reach the API, copy
 `mobile/.env.example` to `mobile/.env` and set `EXPO_PUBLIC_API_URL=http://<your-computer-ip>:3000`.
-Your computer's firewall must allow Node.js on private networks. More detail is in [`mobile/README.md`](mobile/README.md).
+Your computer's firewall must allow Node.js on private networks. To confirm the phone can reach the API, open `http://<your-computer-ip>:3000/health` in the phone's browser first.
 
 > If `npm install` stops with `Cannot read properties of null (reading 'edgesOut')`, run `npm install --legacy-peer-deps`.
 
@@ -136,6 +136,11 @@ database/   SQL migrations (001 to 003), setup scripts and a rule-checking scrip
 The original assessment documents (`REQUIREMENTS.md`, `API_CONTRACTS.md`, `DATABASE_SCHEMA.sql`,
 `mock_data.json`, the PDFs and so on) are untouched.
 
+---
+
+# Original assessment brief (unchanged)
+
+The text below is the official README that came with the assessment.
 
 # LocalBuka Engineering Intern — Technical Assessment
 
